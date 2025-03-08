@@ -121,53 +121,53 @@
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             .banner {
-                padding: 4px; /* Halved size */
-                min-height: auto;
+                padding: 8px; /* Doubled from 4px (back to original) */
+                min-height: 50px; /* Base height doubled from the halved size, adjusted for proportion */
             }
             .banner-content {
-                flex-direction: row; /* Change to row layout */
-                gap: 0; /* Remove gap to align left and right */
-                padding: 0 5px;
-                justify-content: space-between; /* Ensure left and right alignment */
+                flex-direction: row;
+                gap: 0;
+                padding: 0 10px; /* Doubled from 5px */
+                justify-content: space-between;
                 align-items: center;
             }
             .banner-left {
-                display: none; /* Keep hidden as per previous request */
+                display: none; /* Keep hidden */
             }
             .menu {
-                margin: 0; /* Remove margin */
-                flex-wrap: nowrap; /* Prevent wrapping */
-                justify-content: flex-start; /* Align to left */
-                gap: 5px; /* Adjusted gap */
+                margin: 0;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 10px; /* Doubled from 5px */
             }
             .menu a {
-                font-size: 10px; /* Adjusted for proportion with halved banner */
+                font-size: 12px; /* Doubled from 6px (adjusted for original size) */
                 white-space: nowrap;
             }
             .banner-right {
-                justify-content: flex-end; /* Align to right */
+                justify-content: flex-end;
                 width: auto;
                 flex-wrap: nowrap;
-                gap: 5px; /* Adjusted gap */
+                gap: 10px; /* Doubled from 5px */
                 flex-direction: row;
                 align-items: center;
             }
             .price-container {
-                min-width: 30px; /* Adjusted for proportion */
+                min-width: 50px; /* Doubled from 25px */
                 align-items: center;
             }
             .price-container img {
-                width: 12px; /* Adjusted for proportion */
+                width: 20px; /* Doubled from 10px */
             }
             .price {
-                font-size: 8px; /* Adjusted for proportion */
+                font-size: 12px; /* Doubled from 6px */
             }
             .connect-btn {
-                padding: 2px 4px; /* Adjusted for proportion */
-                font-size: 10px; /* Adjusted for proportion */
+                padding: 4px 8px; /* Doubled from 2px 4px */
+                font-size: 14px; /* Doubled from 7px */
             }
             .main-content {
-                margin-top: 50px; /* Adjusted for halved banner */
+                margin-top: 100px; /* Doubled from 50px to match original spacing */
             }
             .social-icons {
                 position: static;
@@ -181,32 +181,32 @@
         @media (max-width: 480px) {
             .banner-content {
                 gap: 0;
-                padding: 0 2.5px;
+                padding: 0 5px; /* Doubled from 2.5px */
             }
             .menu {
-                gap: 3px;
+                gap: 6px; /* Doubled from 3px */
             }
             .menu a {
-                font-size: 8px; /* Further adjusted */
+                font-size: 10px; /* Doubled from 5px */
             }
             .banner-right {
-                gap: 3px;
+                gap: 6px; /* Doubled from 3px */
             }
             .price-container {
-                min-width: 25px; /* Further adjusted */
+                min-width: 40px; /* Doubled from 20px */
             }
             .price-container img {
-                width: 10px; /* Further adjusted */
+                width: 16px; /* Doubled from 8px */
             }
             .price {
-                font-size: 6px; /* Further adjusted */
+                font-size: 10px; /* Doubled from 5px */
             }
             .connect-btn {
-                padding: 1.5px 3px; /* Further adjusted */
-                font-size: 8px; /* Further adjusted */
+                padding: 3px 6px; /* Doubled from 1.5px 3px */
+                font-size: 12px; /* Doubled from 6px */
             }
             .main-content {
-                margin-top: 45px; /* Further adjusted */
+                margin-top: 90px; /* Doubled from 45px */
             }
         }
     </style>
