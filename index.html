@@ -111,7 +111,7 @@
         .social-icons {
             display: flex;
             gap: 12px;
-            margin-top: 20px; /* Add margin to separate from main text */
+            margin-top: 20px;
         }
         .social-icons img {
             width: 24px;
@@ -121,69 +121,57 @@
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             .banner {
-                padding: 8px; /* Reduced padding for a more compact look */
-                min-height: auto; /* Allow the banner to shrink */
+                padding: 4px; /* Halved from 8px */
+                min-height: auto; /* Allow shrinking */
             }
             .banner-content {
                 flex-direction: column;
-                gap: 8px; /* Reduced gap for compactness */
-                padding: 0 10px;
-                align-items: center; /* Center all elements */
+                gap: 4px; /* Halved from 8px */
+                padding: 0 5px;
+                align-items: center;
             }
             .banner-left {
-                justify-content: center;
-                width: 100%;
-                flex-direction: row; /* Keep logo and text side by side */
-                gap: 8px;
-            }
-            .banner-left img {
-                width: 24px; /* Reduced size for mobile */
-            }
-            .banner-left a {
-                font-size: 16px; /* Reduced size for mobile */
-            }
-            .banner-left span {
-                font-size: 12px; /* Reduced size for mobile */
+                display: none; /* Hide the entire banner-left section */
             }
             .menu {
-                margin: 8px 0;
+                margin: 4px 0; /* Halved from 8px */
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 10px;
+                gap: 5px; /* Halved from 10px */
             }
             .menu a {
-                font-size: 12px; /* Reduced size for mobile */
+                font-size: 6px; /* Halved from 12px */
                 white-space: nowrap;
             }
             .banner-right {
                 justify-content: center;
                 width: 100%;
                 flex-wrap: wrap;
-                gap: 10px;
-                flex-direction: row; /* Keep prices and button in a row */
+                gap: 5px; /* Halved from 10px */
+                flex-direction: row;
                 align-items: center;
             }
             .price-container {
-                min-width: 50px; /* Reduced for mobile */
+                min-width: 25px; /* Halved from 50px */
                 align-items: center;
             }
             .price-container img {
-                width: 20px; /* Reduced size for mobile */
+                width: 10px; /* Halved from 20px */
             }
             .price {
-                font-size: 12px; /* Reduced size for mobile */
+                font-size: 6px; /* Halved from 12px */
             }
             .connect-btn {
-                padding: 4px 8px; /* Reduced size for mobile */
-                font-size: 14px; /* Reduced size for mobile */
+                padding: 2px 4px; /* Halved from 4px 8px */
+                font-size: 7px; /* Halved from 14px */
             }
             .main-content {
-                margin-top: 100px; /* Adjusted for smaller banner */
+                margin-top: 50px; /* Adjusted for smaller banner */
             }
             .social-icons {
-                position: static; /* Remove absolute positioning */
-                margin-top: 30px; /* Add more space above social icons */
-                transform: none; /* Remove transform */
+                position: static;
+                margin-top: 30px;
+                transform: none;
                 display: flex;
                 justify-content: center;
             }
@@ -191,45 +179,33 @@
 
         @media (max-width: 480px) {
             .banner-content {
-                gap: 6px; /* Further reduced gap */
-                padding: 0 5px;
-            }
-            .banner-left {
-                gap: 6px;
-            }
-            .banner-left img {
-                width: 20px; /* Further reduced for smaller screens */
-            }
-            .banner-left a {
-                font-size: 14px; /* Further reduced */
-            }
-            .banner-left span {
-                font-size: 10px; /* Further reduced */
+                gap: 3px; /* Halved from 6px */
+                padding: 0 2.5px; /* Halved from 5px */
             }
             .menu {
-                gap: 6px; /* Further reduced gap */
+                gap: 3px; /* Halved from 6px */
             }
             .menu a {
-                font-size: 10px; /* Further reduced */
+                font-size: 5px; /* Halved from 10px */
             }
             .banner-right {
-                gap: 6px; /* Further reduced gap */
+                gap: 3px; /* Halved from 6px */
             }
             .price-container {
-                min-width: 40px; /* Further reduced */
+                min-width: 20px; /* Halved from 40px */
             }
             .price-container img {
-                width: 16px; /* Further reduced */
+                width: 8px; /* Halved from 16px */
             }
             .price {
-                font-size: 10px; /* Further reduced */
+                font-size: 5px; /* Halved from 10px */
             }
             .connect-btn {
-                padding: 3px 6px; /* Further reduced */
-                font-size: 12px; /* Further reduced */
+                padding: 1.5px 3px; /* Halved from 3px 6px */
+                font-size: 6px; /* Halved from 12px */
             }
             .main-content {
-                margin-top: 90px; /* Further adjusted */
+                margin-top: 45px; /* Further adjusted */
             }
         }
     </style>
