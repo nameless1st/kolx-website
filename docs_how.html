@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOLX AI - How It Works</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
+            margin: 0;
+            padding: 0;
+            background-color: #ffcccc; /* Original light pink background */
+            color: #2d2d2d; /* Slightly lighter text for contrast */
+            line-height: 1.6; /* Better readability */
+        }
+        .banner {
+            width: 100%;
+            background: linear-gradient(90deg, #1a1a2e, #2e2e4a); /* Gradient for depth */
+            color: white;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .banner a {
+            color: #e6e6ff; /* Softer white for elegance */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+        .banner a:hover {
+            color: #a3bffa; /* Light blue on hover */
+        }
+        .banner-title {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: nowrap; /* Prevents text from wrapping */
+            transform: translateX(-60px); /* Moves the text 60px to the left */
+        }
+        .container {
+            margin-top: 80px; /* Adjusted for banner height */
+            max-width: 900px; /* Slightly wider for balance */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            border-radius: 12px; /* Smoother corners */
+            text-align: left;
+        }
+        h1 {
+            color: #1a1a2e;
+            font-size: 28px; /* Larger for emphasis */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #007bff;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 16px;
+            color: #555; /* Softer gray for text */
+        }
+        ul {
+            font-size: 16px;
+            color: #555;
+            padding-left: 20px; /* Consistent padding for lists */
+        }
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between Back and Next buttons */
+        }
+        .navigation-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 30px; /* Larger padding */
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation */
+        }
+        .navigation-buttons .back-button {
+            background: linear-gradient(45deg, #ff4d4f, #ff7875); /* Red gradient for "Back" */
+        }
+        .navigation-buttons .back-button:hover {
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 4px 10px rgba(255, 77, 79, 0.3); /* Shadow on hover */
+        }
+        .navigation-buttons .next-button {
+            background: linear-gradient(45deg, #28a745, #34d058); /* Green gradient for "Next" */
+        }
+        .navigation-buttons .next-button:hover {
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); /* Shadow on hover */
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 15px;
+            background: #1a1a2e;
+            color: #e6e6ff;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            .banner-title {
+                margin-top: 10px;
+                transform: translateX(0); /* Reset for mobile stacking */
+            }
+            .container {
+                margin-top: 120px; /* Adjust for stacked banner */
+                padding: 20px;
+            }
+            .navigation-buttons {
+                flex-direction: column; /* Stack buttons on small screens */
+                gap: 10px;
+            }
+            .navigation-buttons a {
+                padding: 10px 20px; /* Slightly smaller padding on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <a href="docs.html">← Back to Docs</a>
+        <span class="banner-title">KOLX AI - How It Works</span>
+    </div>
+
+    <div class="container">
+        <h1>How KOLX AI Works</h1>
+
+        <h2>2.1 AI-Powered Promotion System</h2>
+        <p>
+            KOLX AI automates crypto marketing by engaging with communities using intelligent, 
+            data-driven marketing strategies:
+        </p>
+        <ul>
+            <li>AI creates posts, comments, and interacts with users on X (Twitter), Telegram, and other platforms.</li>
+            <li>Analyzes trending topics and adjusts engagement strategies in real-time.</li>
+            <li>Customizes marketing campaigns based on project needs and community sentiment.</li>
+            <li>Integrated with Agents.land, providing credibility verification and fair exposure for new projects.</li>
+        </ul>
+
+        <h2>2.2 Trust Score System</h2>
+        <p>Every project receives a <b>Trust Score (0-100)</b> based on AI analysis:</p>
+        <ul>
+            <li><b>Project Transparency</b> – Team verification and past projects analysis.</li>
+            <li><b>Tokenomics & Fairness</b> – Evaluates insider holdings, liquidity locks, and fair launch mechanics.</li>
+            <li><b>Community Engagement</b> – AI scans social sentiment, real user interactions, and community activity.</li>
+            <li><b>Security & Audits</b> – Checks for smart contract vulnerabilities and past rug pulls.</li>
+        </ul>
+        <p>
+            Projects with higher <b>Trust Scores</b> receive <b>stronger AI promotion boosts</b>, while 
+            risky projects receive <b>warning labels</b> to protect investors.
+        </p>
+
+        <div class="navigation-buttons">
+            <a href="docs_what.html" class="back-button">← BACK</a>
+            <a href="docs_tokenomics.html" class="next-button">NEXT →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 KOLX AI. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

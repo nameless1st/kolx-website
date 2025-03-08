@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOLX AI - Tokenomics & Utility</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
+            margin: 0;
+            padding: 0;
+            background-color: #ffcccc; /* Original light pink background */
+            color: #2d2d2d; /* Slightly lighter text for contrast */
+            line-height: 1.6; /* Better readability */
+        }
+        .banner {
+            width: 100%;
+            background: linear-gradient(90deg, #1a1a2e, #2e2e4a); /* Gradient for depth */
+            color: white;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        .banner a {
+            color: #e6e6ff; /* Softer white for elegance */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+        .banner a:hover {
+            color: #a3bffa; /* Light blue on hover */
+        }
+        .banner-title {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: nowrap; /* Prevents text from wrapping */
+            transform: translateX(-60px); /* Moves the text 60px to the left */
+        }
+        .container {
+            margin-top: 80px; /* Adjusted for banner height */
+            max-width: 900px; /* Slightly wider for balance */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            border-radius: 12px; /* Smoother corners */
+            text-align: left;
+        }
+        .header {
+            font-size: 28px; /* Larger for emphasis */
+            font-weight: bold;
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+        .sub-header {
+            font-size: 22px;
+            font-weight: 600;
+            color: #007bff;
+            margin-top: 30px;
+        }
+        .text {
+            font-size: 16px;
+            color: #555; /* Softer gray for text */
+            text-align: left;
+            line-height: 1.6;
+        }
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between Back and Next buttons */
+        }
+        .navigation-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 30px; /* Larger padding */
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation */
+        }
+        .navigation-buttons .back-button {
+            background: linear-gradient(45deg, #ff4d4f, #ff7875); /* Red gradient for "Back" */
+        }
+        .navigation-buttons .back-button:hover {
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 4px 10px rgba(255, 77, 79, 0.3); /* Shadow on hover */
+        }
+        .navigation-buttons .next-button {
+            background: linear-gradient(45deg, #28a745, #34d058); /* Green gradient for "Next" */
+        }
+        .navigation-buttons .next-button:hover {
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); /* Shadow on hover */
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 15px;
+            background: #1a1a2e;
+            color: #e6e6ff;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            .banner-title {
+                margin-top: 10px;
+                transform: translateX(0); /* Reset for mobile stacking */
+            }
+            .container {
+                margin-top: 120px; /* Adjust for stacked banner */
+                padding: 20px;
+            }
+            .navigation-buttons {
+                flex-direction: column; /* Stack buttons on small screens */
+                gap: 10px;
+            }
+            .navigation-buttons a {
+                padding: 10px 20px; /* Slightly smaller padding on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <a href="docs.html">← Back to Docs</a>
+        <span class="banner-title">KOLX AI - Tokenomics & Utility</span>
+    </div>
+
+    <div class="container">
+        <div class="header">3. Tokenomics & Utility</div>
+        <div class="sub-header">3.1 Token Overview</div>
+        <p class="text">Token Name: KOLX<br>Network: Solana<br>Total Supply: 1,000,000,000 (1B token)</p>
+        
+        <div class="sub-header">3.2 Token Allocation (Fairlaunch Model on Agents.land)</div>
+        <p class="text">
+            5% → Creator<br>
+            1% → Distilled AI Treasury<br>
+            1% → Agent Wallet<br>
+            2% → Strongbox Vault<br>
+            91% → Fairlaunch (Public sale)
+        </p>
+        
+        <div class="sub-header">3.3 Post-Launch Tokenomics (Revenue Distribution for Stakers)</div>
+        <p class="text">
+            There are two types of stakers:<br>
+            1️⃣ Customers – Projects must buy and stake KOLX tokens to access AI promotions.<br>
+            2️⃣ Holders – Users stake KOLX to earn rewards from the AI-driven marketing fees.
+        </p>
+        
+        <div class="sub-header">Promotion Pricing Model</div>
+        <p class="text">
+            2 Weeks: $12 per day, or an Adjustable Model (Basic, Pro, Premium).<br>
+            1 Month: $11 per day, or an Adjustable Model (Basic, Pro, Premium).<br>
+            3 Months: $10 per day, or an Adjustable Model (Basic, Pro, Premium).<br>
+            1% Contribution Model – New agents/projects launching on Agents.land can allocate 1% of their supply to KOLX instead of paying for promotions.
+        </p>
+        
+        <div class="sub-header">Optimal Staking Rewards Distribution</div>
+        <p class="text">
+            50% → Staking rewards<br>
+            15% → Treasury (For development, marketing, and growth)<br>
+            12% → Project creators & team<br>
+            12% → Allocated to Distilled.ai<br>
+            1% → Burn mechanism<br>
+            5% → Miscellaneous (Governance, AI improvements, expansions)
+        </p>
+        
+        <div class="sub-header">3.4 Unstaking Period</div>
+        <p class="text">
+            KOLX has a mandatory 2-week unstaking period before tokens are released, preventing sudden dumps and ensuring price stability. 
+            Tokens staked for promotions by customers are non-refundable and are redistributed to holder stakers.
+        </p>
+        
+        <div class="navigation-buttons">
+            <a href="docs_how.html" class="back-button">← BACK</a>
+            <a href="docs_roadmap.html" class="next-button">NEXT →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 KOLX AI. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
