@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOLX AI - AI-Powered Crypto Marketing</title>
     <style>
         body {
@@ -14,41 +14,31 @@
         }
         .banner {
             width: 100%;
-            height: auto;
+            height: 2cm;
             background: #1a1a2e;
             color: white;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px;
+            padding: 0 20px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1000;
-            flex-wrap: wrap;
         }
         .banner-left {
             display: flex;
             align-items: center;
             gap: 10px;
-            flex-wrap: wrap;
         }
         .banner-left img {
-            width: 1.4cm;
+            width: 30px;
             height: auto;
         }
         .banner-right {
             display: flex;
             align-items: center;
             gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
         }
         .menu a {
             color: white;
@@ -70,66 +60,17 @@
         .connect-btn:hover {
             background: #0056b3;
         }
-        .social-icons {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            gap: 15px;
-        }
-        @media (max-width: 768px) {
-            .banner {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px;
-                display: flex;
-            }
-            .banner-left {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            .banner-left img {
-                width: 1.4cm;
-                height: auto;
-            }
-            .banner-right {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: row;
-                gap: 15px;
-            }
-            .menu {
-                display: none;
-            }
-        }
-            .banner-right {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .menu {
-                flex-direction: column;
-                gap: 5px;
-            }
-            .social-icons {
-                bottom: 10px;
-                right: 10px;
-                gap: 10px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="banner">
-        <div class="banner-left">
-            <a href="/"><img src="logo.png" alt="KOLX Logo"></a>
-            <div>
-                <a href="/" style="color: white; font-weight: bold; text-decoration: none; font-size: 18px;">Kolx.land</a>
-                <span style="font-size: 14px; color: #ccc; display: block;">Marketing. Trust. Rewards.</span>
+        <div class="banner-left" style="display: flex; align-items: center; gap: 10px;">
+            <a href="/"><img src="logo.png" alt="KOLX Logo" style="width: 1.4cm; height: auto;"></a>
+            <div style="display: flex; flex-direction: column;">
+                <a href="/" style="color: white; font-weight: bold; font-size: 18px; text-decoration: none;">Kolx.land</a>
+                <span style="font-size: 14px; color: #ccc;">Marketing. Trust. Rewards.</span>
             </div>
+            
         </div>
         <div class="menu">
             <a href="#">Home</a>
@@ -137,7 +78,7 @@
             <a href="#">Stake</a>
             <a href="#">Docs</a>
         </div>
-        <div class="banner-right">
+        <div class="banner-right" style="display: flex; align-items: center; gap: 15px; transform: translateX(-1cm);">
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <img src="btc-logo.png" alt="BTC" style="width: 24px; height: auto;">
                 <span id="btc-price" class="price">Loading...</span>
@@ -153,29 +94,13 @@
             <a href="#" class="connect-btn" onclick="connectWallet()">CONNECT</a>
         </div>
     </div>
-    <div style="margin-top: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
-        <img src="logo.png" alt="KOLX AI Logo" style="width: 250px; height: auto; margin-bottom: 20px;">
+    <div style="margin-top: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+        <img src="logo.png" alt="KOLX AI Logo" style="width: 390px; height: auto; margin-bottom: 20px;">
         <h1>Welcome to KOLX AI</h1>
         <p>The Future of Fair & Transparent Crypto Promotions</p>
         <a href="#" class="btn">Coming Soon</a>
     </div>
-    <div class="social-icons">
-        <a href="https://x.com/kolx_ai" target="_blank"><img src="twitter-logo.png" style="width: 30px; height: auto;"></a>
-        <a href="https://t.me/kolx_ai" target="_blank"><img src="telegram-logo.png" style="width: 30px; height: auto;"></a>
-    </div>
     <script>
-        async function fetchCryptoPrices() {
-            try {
-                let response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,max-2&vs_currencies=usd');
-                let data = await response.json();
-                document.getElementById('btc-price').textContent = `$${data.bitcoin.usd.toLocaleString()}`;
-                document.getElementById('max-price').textContent = `$${data['max-2'].usd.toFixed(3)}`;
-            } catch (error) {
-                console.error('Error fetching crypto prices:', error);
-            }
-        }
-        fetchCryptoPrices();
-        setInterval(fetchCryptoPrices, 60000);
         async function connectWallet() {
             if (window.solana && window.solana.isPhantom) {
                 try {
@@ -189,5 +114,37 @@
             }
         }
     </script>
+<script>
+        async function fetchCryptoPrices() {
+            try {
+                let response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,max-2&vs_currencies=usd');
+                let data = await response.json();
+                document.getElementById('btc-price').textContent = $${data.bitcoin.usd.toLocaleString()};
+                document.getElementById('max-price').textContent = $${data.maxcoin.usd.toFixed(2)};
+            } catch (error) {
+                console.error('Error fetching crypto prices:', error);
+            }
+        }
+        fetchCryptoPrices();
+        setInterval(fetchCryptoPrices, 60000); // Update prices every 60 seconds
+    </script>
+<script>
+        async function fetchCryptoPrices() {
+            try {
+                let response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,max-2&vs_currencies=usd');
+                let data = await response.json();
+                document.getElementById('btc-price').textContent = $${data.bitcoin.usd.toLocaleString()};
+                document.getElementById('max-price').textContent = $${data['max-2'].usd.toFixed(2)};
+            } catch (error) {
+                console.error('Error fetching crypto prices:', error);
+            }
+        }
+        fetchCryptoPrices();
+        setInterval(fetchCryptoPrices, 60000); // Update prices every 60 seconds
+    </script>
+<div class="social-icons" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px;">
+        <a href="https://x.com/kolx_ai" target="_blank"><img src="twitter-logo.png" style="width: 30px; height: auto;"></a>
+        <a href="https://t.me/kolx_ai" target="_blank"><img src="telegram-logo.png" style="width: 30px; height: auto;"></a>
+    </div>
 </body>
 </html>
