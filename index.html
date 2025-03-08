@@ -16,60 +16,60 @@
             width: 100%;
             background: #1a1a2e;
             color: white;
-            padding: 10.4px 20.8px; /* Increased by 30% from 8px 16px */
+            padding: 10.4px 20.8px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1000;
-            min-height: 62.4px; /* Increased by 30% from 48px */
+            min-height: 62.4px;
             display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
+            align-items: center;
+            justify-content: center;
         }
         .banner-content {
             max-width: 1200px;
             width: 100%;
             display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: space-between; /* Maintain space between sections */
+            align-items: center;
+            justify-content: space-between;
             flex-wrap: wrap;
-            height: 100%; /* Ensure full height of banner */
+            height: 100%;
         }
         .banner-left {
             display: flex;
             align-items: center;
-            gap: 10.4px; /* Increased by 30% from 8px */
+            gap: 10.4px;
             flex-shrink: 0;
         }
         .banner-left img {
-            width: 31.2px; /* Increased by 30% from 24px */
+            width: 31.2px;
             height: auto;
         }
         .banner-left a {
-            font-size: 18.72px; /* Increased by 30% from 14.4px */
+            font-size: 18.72px;
             color: white;
             font-weight: bold;
             text-decoration: none;
         }
         .banner-left span {
-            font-size: 14.56px; /* Increased by 30% from 11.2px */
+            font-size: 14.56px;
             color: #ccc;
         }
         .menu {
             display: flex;
-            gap: 15.6px; /* Increased by 30% from 12px */
+            gap: 15.6px;
             flex-wrap: wrap;
             justify-content: center;
         }
         .menu a {
             color: white;
             text-decoration: none;
-            font-size: 14.56px; /* Increased by 30% from 11.2px */
+            font-size: 14.56px;
         }
         .banner-right {
             display: flex;
             align-items: center;
-            gap: 15.6px; /* Increased by 30% from 12px */
+            gap: 15.6px;
             flex-wrap: wrap;
             justify-content: flex-end;
         }
@@ -77,24 +77,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 62.4px; /* Increased by 30% from 48px */
+            min-width: 62.4px;
         }
         .price-container img {
-            width: 24.96px; /* Increased by 30% from 19.2px */
+            width: 24.96px;
             height: auto;
         }
         .price {
-            font-size: 14.56px; /* Increased by 30% from 11.2px */
+            font-size: 14.56px;
         }
         .connect-btn {
-            padding: 5.2px 10.4px; /* Increased by 30% from 4px 8px */
+            padding: 5.2px 10.4px;
             background: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5.2px; /* Increased by 30% from 4px */
+            border-radius: 5.2px;
             font-weight: bold;
             white-space: nowrap;
-            font-size: 16.64px; /* Increased by 30% from 12.8px */
+            font-size: 16.64px;
         }
         .connect-btn:hover {
             background: #0056b3;
@@ -108,45 +108,128 @@
             justify-content: center;
             align-items: center;
         }
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px; /* Add margin to separate from main text */
+        }
+        .social-icons img {
+            width: 24px;
+            height: auto;
+        }
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             .banner {
-                padding: 10.4px; /* Increased by 30% from 8px */
+                padding: 8px; /* Reduced padding for a more compact look */
+                min-height: auto; /* Allow the banner to shrink */
             }
             .banner-content {
                 flex-direction: column;
-                gap: 10.4px; /* Increased by 30% from 8px */
+                gap: 8px; /* Reduced gap for compactness */
+                padding: 0 10px;
+                align-items: center; /* Center all elements */
             }
             .banner-left {
                 justify-content: center;
                 width: 100%;
+                flex-direction: row; /* Keep logo and text side by side */
+                gap: 8px;
+            }
+            .banner-left img {
+                width: 24px; /* Reduced size for mobile */
+            }
+            .banner-left a {
+                font-size: 16px; /* Reduced size for mobile */
+            }
+            .banner-left span {
+                font-size: 12px; /* Reduced size for mobile */
             }
             .menu {
-                margin: 10.4px 0; /* Increased by 30% from 8px */
+                margin: 8px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .menu a {
+                font-size: 12px; /* Reduced size for mobile */
+                white-space: nowrap;
             }
             .banner-right {
                 justify-content: center;
                 width: 100%;
+                flex-wrap: wrap;
+                gap: 10px;
+                flex-direction: row; /* Keep prices and button in a row */
+                align-items: center;
+            }
+            .price-container {
+                min-width: 50px; /* Reduced for mobile */
+                align-items: center;
+            }
+            .price-container img {
+                width: 20px; /* Reduced size for mobile */
+            }
+            .price {
+                font-size: 12px; /* Reduced size for mobile */
+            }
+            .connect-btn {
+                padding: 4px 8px; /* Reduced size for mobile */
+                font-size: 14px; /* Reduced size for mobile */
             }
             .main-content {
-                margin-top: 96px;
+                margin-top: 100px; /* Adjusted for smaller banner */
+            }
+            .social-icons {
+                position: static; /* Remove absolute positioning */
+                margin-top: 30px; /* Add more space above social icons */
+                transform: none; /* Remove transform */
+                display: flex;
+                justify-content: center;
             }
         }
 
         @media (max-width: 480px) {
+            .banner-content {
+                gap: 6px; /* Further reduced gap */
+                padding: 0 5px;
+            }
+            .banner-left {
+                gap: 6px;
+            }
             .banner-left img {
-                width: 26px; /* Increased by 30% from 20px */
+                width: 20px; /* Further reduced for smaller screens */
+            }
+            .banner-left a {
+                font-size: 14px; /* Further reduced */
+            }
+            .banner-left span {
+                font-size: 10px; /* Further reduced */
+            }
+            .menu {
+                gap: 6px; /* Further reduced gap */
             }
             .menu a {
-                font-size: 12.48px; /* Increased by 30% from 9.6px */
+                font-size: 10px; /* Further reduced */
+            }
+            .banner-right {
+                gap: 6px; /* Further reduced gap */
+            }
+            .price-container {
+                min-width: 40px; /* Further reduced */
+            }
+            .price-container img {
+                width: 16px; /* Further reduced */
             }
             .price {
-                font-size: 12.48px; /* Increased by 30% from 9.6px */
+                font-size: 10px; /* Further reduced */
             }
             .connect-btn {
-                padding: 4.16px 8.32px; /* Increased by 30% from 3.2px 6.4px */
-                font-size: 14.56px; /* Increased by 30% from 11.2px */
+                padding: 3px 6px; /* Further reduced */
+                font-size: 12px; /* Further reduced */
+            }
+            .main-content {
+                margin-top: 90px; /* Further adjusted */
             }
         }
     </style>
@@ -189,10 +272,10 @@
         <h1>Welcome to KOLX AI</h1>
         <p>The Future of Fair & Transparent Crypto Promotions</p>
         <a href="#" class="btn">Coming Soon</a>
-    </div>
-    <div class="social-icons" style="position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px;">
-        <a href="https://x.com/kolx_ai" target="_blank"><img src="twitter-logo.png" style="width: 24px; height: auto;"></a>
-        <a href="https://t.me/kolx_ai" target="_blank"><img src="telegram-logo.png" style="width: 24px; height: auto;"></a>
+        <div class="social-icons">
+            <a href="https://x.com/kolx_ai" target="_blank"><img src="twitter-logo.png" alt="X"></a>
+            <a href="https://t.me/kolx_ai" target="_blank"><img src="telegram-logo.png" alt="Telegram"></a>
+        </div>
     </div>
 
     <script>
