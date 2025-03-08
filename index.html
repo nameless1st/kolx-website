@@ -121,52 +121,53 @@
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             .banner {
-                padding: 4px; /* Halved from 8px */
-                min-height: auto; /* Allow shrinking */
+                padding: 4px; /* Halved size */
+                min-height: auto;
             }
             .banner-content {
-                flex-direction: column;
-                gap: 4px; /* Halved from 8px */
+                flex-direction: row; /* Change to row layout */
+                gap: 0; /* Remove gap to align left and right */
                 padding: 0 5px;
+                justify-content: space-between; /* Ensure left and right alignment */
                 align-items: center;
             }
             .banner-left {
-                display: none; /* Hide the entire banner-left section */
+                display: none; /* Keep hidden as per previous request */
             }
             .menu {
-                margin: 4px 0; /* Halved from 8px */
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 5px; /* Halved from 10px */
+                margin: 0; /* Remove margin */
+                flex-wrap: nowrap; /* Prevent wrapping */
+                justify-content: flex-start; /* Align to left */
+                gap: 5px; /* Adjusted gap */
             }
             .menu a {
-                font-size: 6px; /* Halved from 12px */
+                font-size: 10px; /* Adjusted for proportion with halved banner */
                 white-space: nowrap;
             }
             .banner-right {
-                justify-content: center;
-                width: 100%;
-                flex-wrap: wrap;
-                gap: 5px; /* Halved from 10px */
+                justify-content: flex-end; /* Align to right */
+                width: auto;
+                flex-wrap: nowrap;
+                gap: 5px; /* Adjusted gap */
                 flex-direction: row;
                 align-items: center;
             }
             .price-container {
-                min-width: 25px; /* Halved from 50px */
+                min-width: 30px; /* Adjusted for proportion */
                 align-items: center;
             }
             .price-container img {
-                width: 10px; /* Halved from 20px */
+                width: 12px; /* Adjusted for proportion */
             }
             .price {
-                font-size: 6px; /* Halved from 12px */
+                font-size: 8px; /* Adjusted for proportion */
             }
             .connect-btn {
-                padding: 2px 4px; /* Halved from 4px 8px */
-                font-size: 7px; /* Halved from 14px */
+                padding: 2px 4px; /* Adjusted for proportion */
+                font-size: 10px; /* Adjusted for proportion */
             }
             .main-content {
-                margin-top: 50px; /* Adjusted for smaller banner */
+                margin-top: 50px; /* Adjusted for halved banner */
             }
             .social-icons {
                 position: static;
@@ -179,30 +180,30 @@
 
         @media (max-width: 480px) {
             .banner-content {
-                gap: 3px; /* Halved from 6px */
-                padding: 0 2.5px; /* Halved from 5px */
+                gap: 0;
+                padding: 0 2.5px;
             }
             .menu {
-                gap: 3px; /* Halved from 6px */
+                gap: 3px;
             }
             .menu a {
-                font-size: 5px; /* Halved from 10px */
+                font-size: 8px; /* Further adjusted */
             }
             .banner-right {
-                gap: 3px; /* Halved from 6px */
+                gap: 3px;
             }
             .price-container {
-                min-width: 20px; /* Halved from 40px */
+                min-width: 25px; /* Further adjusted */
             }
             .price-container img {
-                width: 8px; /* Halved from 16px */
+                width: 10px; /* Further adjusted */
             }
             .price {
-                font-size: 5px; /* Halved from 10px */
+                font-size: 6px; /* Further adjusted */
             }
             .connect-btn {
-                padding: 1.5px 3px; /* Halved from 3px 6px */
-                font-size: 6px; /* Halved from 12px */
+                padding: 1.5px 3px; /* Further adjusted */
+                font-size: 8px; /* Further adjusted */
             }
             .main-content {
                 margin-top: 45px; /* Further adjusted */
