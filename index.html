@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOLX AI - Stake</title>
+    <title>KOLX AI - AI-Powered Crypto Marketing</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffcccc;
-            color: #2d2d2d;
-            line-height: 1.6;
             text-align: center;
+            background-color: #ffcccc;
         }
         .banner {
             width: 100%;
@@ -27,7 +25,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
         .banner-content {
             max-width: 1200px;
@@ -36,6 +33,7 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            height: 100%;
         }
         .banner-left {
             display: flex;
@@ -101,131 +99,23 @@
         .connect-btn:hover {
             background: #0056b3;
         }
-        .content {
-            margin-top: 80px;
-            padding: 30px;
+        .main-content {
+            margin-top: 64px;
+            padding: 16px;
+            min-height: calc(100vh - 64px);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
-        .title {
-            font-size: 32px;
-            font-weight: bold;
-            color: #2d2d2d;
-            margin-bottom: 20px;
-        }
-        .stake-container {
-            display: flex;
             justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            align-items: center;
         }
-        .stake-box {
-            background: #2d2d3a;
-            border-radius: 15px;
-            padding: 30px;
-            width: 400px;
-            height: 500px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid #3a3a50;
-            color: #e6e6ff;
-            text-align: center;
+        .social-icons {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            gap: 12px;
+            margin-top: 20px;
         }
-        .stake-box h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #e6e6ff;
-        }
-        .stake-box p {
-            font-size: 16px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-        .lock-amount {
-            margin-bottom: 20px;
-        }
-        .lock-amount input {
-            width: 100%;
-            padding: 12px;
-            background: #3a3a50;
-            border: 1px solid #4a4a60;
-            border-radius: 8px;
-            color: #e6e6ff;
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .lock-amount .max-btn {
-            padding: 8px 15px;
-            background: #4a4a60;
-            border: none;
-            border-radius: 15px;
-            color: #e6e6ff;
-            font-size: 14px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        .lock-amount .max-btn img {
-            width: 18px;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-        .lock-amount .percent-btns {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .lock-amount .percent-btn {
-            padding: 8px 12px;
-            background: #4a4a60;
-            border: none;
-            border-radius: 5px;
-            color: #e6e6ff;
-            font-size: 14px;
-            cursor: pointer;
-            flex: 1;
-            margin: 0 2px;
-        }
-        .lock-amount .balance {
-            font-size: 14px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-        .lock-duration {
-            margin-bottom: 20px;
-        }
-        .lock-duration .duration-btn {
-            padding: 12px 20px;
-            background: #4a4a60;
-            border: none;
-            border-radius: 8px;
-            color: #e6e6ff;
-            font-size: 16px;
-            margin: 0 5px 10px;
-            cursor: pointer;
-            display: inline-block;
-        }
-        .unlock-date {
-            font-size: 14px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-        .lock-btn {
-            width: 100%;
-            padding: 12px;
-            background: #6c757d;
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 18px;
-            cursor: not-allowed;
-        }
-        .lock-btn:hover {
-            background: #5a6268;
+        .social-icons img {
+            width: 24px;
+            height: auto;
         }
 
         /* Mobile-specific styles */
@@ -276,18 +166,15 @@
                 padding: 4px 8px;
                 font-size: 14px;
             }
-            .content {
+            .main-content {
                 margin-top: 100px;
-                padding: 15px;
             }
-            .stake-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .stake-box {
-                width: 100%;
-                height: auto;
-                padding: 20px;
+            .social-icons {
+                position: static;
+                margin-top: 30px;
+                transform: none;
+                display: flex;
+                justify-content: center;
             }
         }
 
@@ -318,7 +205,7 @@
                 padding: 3px 6px;
                 font-size: 12px;
             }
-            .content {
+            .main-content {
                 margin-top: 90px;
             }
         }
@@ -336,9 +223,9 @@
             </div>
             <div class="menu">
                 <a href="/index.html">Home</a> <!-- Updated to root-relative path -->
-                <a href="/swap.html">Swap</a>
-                <a href="/stake.html">Stake</a>
-                <a href="/docs.html">Docs</a>
+                <a href="/swap.html">Swap</a>   <!-- Updated to root-relative path -->
+                <a href="/stake.html">Stake</a> <!-- Updated to root-relative path -->
+                <a href="/docs.html">Docs</a>   <!-- Updated to root-relative path -->
             </div>
             <div class="banner-right">
                 <div class="price-container">
@@ -357,54 +244,14 @@
             </div>
         </div>
     </div>
-
-    <div class="content">
-        <div class="title">Let's Lock Now</div>
-        <div class="stake-container">
-            <div class="stake-box">
-                <h2>Customers</h2>
-                <p>Stake $KOLX to access AI-powered promotions.</p>
-                <div class="lock-amount">
-                    <input type="number" value="0.0" readonly>
-                    <button class="max-btn">KOLX <img src="kolx-logo.png" alt="KOLX"></button>
-                    <div class="percent-btns">
-                        <button class="percent-btn">25%</button>
-                        <button class="percent-btn">50%</button>
-                        <button class="percent-btn">75%</button>
-                        <button class="percent-btn">100%</button>
-                    </div>
-                    <div class="balance">Balance: 0 KOLX</div>
-                </div>
-                <div class="lock-duration">
-                    <button class="duration-btn">14 days</button>
-                    <button class="duration-btn">30 days</button>
-                    <button class="duration-btn">90 days</button>
-                </div>
-                <div class="unlock-date">Unlock on: [Date will be calculated]</div>
-                <button class="lock-btn">LOCK</button>
-            </div>
-            <div class="stake-box">
-                <h2>Holders</h2>
-                <p>Stake $KOLX to earn rewards from promotional fees.</p>
-                <div class="lock-amount">
-                    <input type="number" value="0.0" readonly>
-                    <button class="max-btn">KOLX <img src="kolx-logo.png" alt="KOLX"></button>
-                    <div class="percent-btns">
-                        <button class="percent-btn">25%</button>
-                        <button class="percent-btn">50%</button>
-                        <button class="percent-btn">75%</button>
-                        <button class="percent-btn">100%</button>
-                    </div>
-                    <div class="balance">Balance: 0 KOLX</div>
-                </div>
-                <div class="lock-duration">
-                    <button class="duration-btn">1 month</button>
-                    <button class="duration-btn">3 months</button>
-                    <button class="duration-btn">6 months</button>
-                </div>
-                <div class="unlock-date">Unlock on: [Date will be calculated]</div>
-                <button class="lock-btn">LOCK</button>
-            </div>
+    <div class="main-content">
+        <img src="logo.png" alt="KOLX AI Logo" style="width: 100%; max-width: 312px; height: auto; margin-bottom: 16px;">
+        <h1>Welcome to KOLX AI</h1>
+        <p>The Future of Fair & Transparent Crypto Promotions</p>
+        <a href="#" class="btn">Coming Soon</a>
+        <div class="social-icons">
+            <a href="https://x.com/kolx_ai" target="_blank"><img src="twitter-logo.png" alt="X"></a>
+            <a href="https://t.me/kolx_ai" target="_blank"><img src="telegram-logo.png" alt="Telegram"></a>
         </div>
     </div>
 
