@@ -261,7 +261,7 @@ footer {
     .follow-btn {
         flex-direction: column;
         margin: 20px 0;
-        transform: translateY(200px); /* Coboară logo-urile X, Telegram și "Follow Us" cu 200px */
+        transform: translateY(100px); /* Ridică secțiunea "Follow Us" cu 100px față de poziția actuală */
     }
 
     .follow-btn span {
@@ -275,7 +275,7 @@ footer {
     }
 
     footer {
-        transform: translateY(-200px); /* Ridică footer-ul cu 200px */
+        transform: translateY(-200px); /* Păstrează footer-ul ridicat cu 200px */
     }
 
     .footer-buttons {
