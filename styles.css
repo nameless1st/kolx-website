@@ -261,7 +261,7 @@ footer {
     .follow-btn {
         flex-direction: column;
         margin: 20px 0;
-        transform: translateY(400px); /* Ridică secțiunea "Follow Us" cu 200px (100px anterior + 100px noi) */
+        transform: translateY(-300px); /* Ridică secțiunea "Follow Us" cu 200px (100px anterior + 100px noi) */
     }
 
     .follow-btn span {
