@@ -267,7 +267,7 @@ footer {
     .follow-btn {
         flex-direction: column;
         margin: 20px 0;
-        transform: translateY(200px); /* Poziția nemodificată pentru mobil */
+        transform: translateY(1px); /* Poziția nemodificată pentru mobil */
     }
 
     .follow-btn span {
