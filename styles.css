@@ -59,7 +59,7 @@ body {
 /* Poziții și lungimi aleatorii pentru linii, distribuite pe întreaga pagină */
 .rotating-lines .line:nth-child(1) {
     width: 150px;
-    top: 5%;
+    top: calc(5% + 500px);
     left: 10%;
     animation-duration: 8s;
 }
