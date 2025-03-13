@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Pentru a preveni overflow-ul efectului de fundal */
 }
 
 /* Fundal animat cu gradient */
@@ -20,14 +20,20 @@ body {
     background: linear-gradient(45deg, #1a1a1a, #000000, #1a1a1a);
     background-size: 200% 200%;
     animation: gradientShift 15s ease infinite;
-    z-index: -1;
-    opacity: 0.5;
+    z-index: -1; /* Fundalul rămâne în spatele conținutului */
+    opacity: 0.5; /* Subtil pentru a nu distrage atenția */
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Container pentru liniile rotative */
@@ -37,23 +43,23 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 0; /* Sub conținut, dar deasupra fundalului */
 }
 
 /* Stilul liniilor */
 .rotating-lines .line {
     position: absolute;
     height: 1px;
-    background: #ff6200;
-    opacity: 0.3;
+    background: #ff6200; /* Culoare portocalie */
+    opacity: 0.3; /* Subtil pentru minimalism */
     transform-origin: 0 0;
     animation: rotateLine linear infinite;
 }
 
-/* Poziții și lungimi aleatorii pentru linii */
+/* Poziții și lungimi aleatorii pentru linii, distribuite pe întreaga pagină */
 .rotating-lines .line:nth-child(1) {
     width: 150px;
-    top: calc(5% + 600px);
+    top: 5%;
     left: 10%;
     animation-duration: 8s;
 }
@@ -96,8 +102,12 @@ body {
 }
 
 @keyframes rotateLine {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .container {
@@ -106,63 +116,19 @@ body {
     padding: 40px;
     flex: 1;
     position: relative;
-    z-index: 1;
-}
-
-/* Stil pentru versiunea desktop (≥769px) */
-@media (min-width: 769px) {
-    .logo-link {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Mută logo-ul și textul KOLX în stânga */
-        margin-left: 20px;
-        width: auto;
-    }
-}
-
-/* Stil pentru versiunea mobilă (≤768px) */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .logo-link {
-        display: flex;
-        align-items: center;
-        justify-content: center; /* Centrează pe mobil */
-        width: 100%;
-        margin-left: 0;
-    }
-
-    /* Centrare și ridicare pentru Launching Soon, descriere, logo X, Telegram și Follow Us */
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-top: 30px; /* Ridică elementele cu 100px */
-    }
-
-    /* Butoanele din footer să fie unul sub altul */
-    .footer-buttons {
-        display: flex;
-        flex-direction: column; /* Stivuire verticală */
-        align-items: center;
-        gap: 10px;
-        margin-top: -120px; /* Ridică butoanele cu 100px */
-    }
-
-    .btn {
-        width: 80%; /* Butoanele să fie mai mari și să arate bine pe mobil */
-        text-align: center;
-    }
+    z-index: 1; /* Containerul rămâne deasupra fundalului animat */
 }
 
 header {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo {
@@ -176,18 +142,26 @@ header {
     font-weight: 600;
     color: #fff;
     letter-spacing: 1px;
+}
+
+.content {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    position: relative; /* Pentru a poziționa liniile relative la h1 */
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 48px; /* Dimensiune mai mică pentru un aspect mai subtil */
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     margin: 0;
     letter-spacing: 1px;
-    position: relative;
+    position: relative; /* Pentru a poziționa liniile în jurul textului */
 }
 
 /* Liniile care se rotesc în jurul textului */
@@ -195,20 +169,20 @@ h1::before,
 h1::after {
     content: '';
     position: absolute;
-    width: 200px;
+    width: 200px; /* Lungime dublată */
     height: 1px;
-    background: #ff6200;
+    background: #ff6200; /* Culoare portocalie pentru linii */
     top: 50%;
     animation: rotateLine 6s linear infinite;
 }
 
 h1::before {
-    left: -220px;
+    left: -220px; /* Ajustare pentru lungimea mai mare */
     transform-origin: 100% 0;
 }
 
 h1::after {
-    right: -220px;
+    right: -220px; /* Ajustare pentru lungimea mai mare */
     transform-origin: 0 0;
 }
 
@@ -223,7 +197,6 @@ p {
 
 .follow-btn {
     display: flex;
-    flex-direction: column; /* Elemente unul sub altul */
     align-items: center;
     margin: 30px 0;
 }
@@ -231,8 +204,8 @@ p {
 .follow-btn span {
     font-size: 16px;
     font-weight: 400;
-    color: #ff6200;
-    margin-bottom: 10px;
+    color: #ff6200; /* Culoare portocalie */
+    margin: 0 15px;
 }
 
 .social-link {
@@ -254,29 +227,78 @@ footer {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Footer-ul rămâne deasupra fundalului animat */
 }
 
 .footer-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: -100px;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px; /* Dimensiune mai mică pe mobil */
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    .content {
+        justify-content: flex-start; /* Mută conținutul mai sus */
+        padding-top: 50px; /* Ajustare pentru a ridica conținutul */
+    }
+
+    .follow-btn {
+        flex-direction: column;
+        margin: 20px 0;
+        transform: translateY(-100px); /* Ridică logo-urile X, Telegram și "Follow Us" cu 100px */
+    }
+
+    .follow-btn span {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    footer {
+        transform: translateY(-100px); /* Ridică footer-ul cu 100px */
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
 }
 
 .btn {
     background-color: transparent;
     border: 1px solid #444;
-    color: #d1d1d1;
-    padding: 10px 20px;
+    color: #d1d1d1; /* Gri deschis */
+    padding: 8px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     text-decoration: none;
     transition: all 0.3s ease;
-    width: 80%;
-    text-align: center;
 }
 
 .btn:hover {
