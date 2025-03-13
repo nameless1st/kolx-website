@@ -36,6 +36,80 @@ body {
     }
 }
 
+/* Container pentru liniile rotative */
+.rotating-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Sub conținut, dar deasupra fundalului */
+}
+
+/* Stilul liniilor */
+.rotating-lines .line {
+    position: absolute;
+    height: 1px;
+    background: #ff6200; /* Culoare portocalie */
+    opacity: 0.3; /* Subtil pentru minimalism */
+    transform-origin: 0 0;
+    animation: rotateLine linear infinite;
+}
+
+/* Poziții și lungimi aleatorii pentru linii, distribuite pe întreaga pagină */
+.rotating-lines .line:nth-child(1) {
+    width: 150px;
+    top: 5%;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.rotating-lines .line:nth-child(2) {
+    width: 200px;
+    top: 15%;
+    left: 85%;
+    animation-duration: 12s;
+    animation-direction: reverse;
+}
+
+.rotating-lines .line:nth-child(3) {
+    width: 180px;
+    top: 30%;
+    left: 5%;
+    animation-duration: 10s;
+}
+
+.rotating-lines .line:nth-child(4) {
+    width: 220px;
+    top: 75%;
+    left: 90%;
+    animation-duration: 14s;
+}
+
+.rotating-lines .line:nth-child(5) {
+    width: 170px;
+    top: 45%;
+    left: 20%;
+    animation-duration: 9s;
+    animation-direction: reverse;
+}
+
+.rotating-lines .line:nth-child(6) {
+    width: 190px;
+    top: 85%;
+    left: 60%;
+    animation-duration: 11s;
+}
+
+@keyframes rotateLine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,10 +119,53 @@ body {
     z-index: 1; /* Containerul rămâne deasupra fundalului animat */
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px; /* Dimensiune mai mică pe mobil */
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 15px 0;
+    }
+
+    .follow-btn {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .follow-btn span {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
 header {
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .logo-link {
@@ -75,33 +192,41 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 250px);
+    min-height: calc(100vh - 200px);
     text-align: center;
+    position: relative; /* Pentru a poziționa liniile relative la h1 */
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 48px; /* Dimensiune mai mică pentru un aspect mai subtil */
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: 2px;
-    animation: pulse 3s ease-in-out infinite; /* Efect de puls subtil */
+    letter-spacing: 1px;
+    position: relative; /* Pentru a poziționa liniile în jurul textului */
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.05);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+/* Liniile care se rotesc în jurul textului */
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    width: 200px; /* Lungime dublată */
+    height: 1px;
+    background: #ff6200; /* Culoare portocalie pentru linii */
+    top: 50%;
+    animation: rotateLine 6s linear infinite;
+}
+
+h1::before {
+    left: -220px; /* Ajustare pentru lungimea mai mare */
+    transform-origin: 100% 0;
+}
+
+h1::after {
+    right: -220px; /* Ajustare pentru lungimea mai mare */
+    transform-origin: 0 0;
 }
 
 p {
@@ -157,7 +282,7 @@ footer {
 .btn {
     background-color: transparent;
     border: 1px solid #444;
-    color: #ff6200; /* Culoare portocalie */
+    color: #d1d1d1; /* Gri deschis */
     padding: 8px 16px;
     border-radius: 50px;
     font-size: 12px;
