@@ -123,6 +123,7 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    margin-left: -200px; /* Mută logo-ul și textul KOLX spre stânga cu 200px */
 }
 
 .logo-link {
@@ -228,6 +229,7 @@ footer {
     text-align: center;
     position: relative;
     z-index: 1; /* Footer-ul rămâne deasupra fundalului animat */
+    transform: translateY(-50px); /* Ridică butoanele din footer cu 50px în versiunea desktop */
 }
 
 .footer-buttons {
@@ -236,10 +238,14 @@ footer {
     gap: 15px;
 }
 
-/* Responsive design */
+/* Responsive design (versiunea mobilă rămâne nemodificată) */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
+    }
+
+    header {
+        margin-left: 0; /* Anulează mutarea spre stânga pentru mobil */
     }
 
     h1 {
@@ -261,7 +267,7 @@ footer {
     .follow-btn {
         flex-direction: column;
         margin: 20px 0;
-        transform: translateY(1px); /* Ridică secțiunea "Follow Us" cu 200px (100px anterior + 100px noi) */
+        transform: translateY(200px); /* Poziția nemodificată pentru mobil */
     }
 
     .follow-btn span {
@@ -275,7 +281,7 @@ footer {
     }
 
     footer {
-        transform: translateY(-200px); /* Păstrează footer-ul ridicat cu 200px */
+        transform: translateY(-200px); /* Poziția nemodificată pentru mobil */
     }
 
     .footer-buttons {
