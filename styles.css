@@ -172,8 +172,7 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: -20px; /* Mută logo-ul și textul KOLX cu 2 cm mai spre
-
+}
 
 .logo {
     width: 40px;
@@ -278,7 +277,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: -40px; /* Ridică butoanele cu 2 cm */
+    margin-top: -20px; /* Ridică butoanele cu 2 cm */
 }
 
 .btn {
