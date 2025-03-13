@@ -170,23 +170,27 @@ header {
 }
 
     .logo-link {
-        justify-content: center; /* Centrează logo-ul și textul KOLX */
+        display: flex;
+        align-items: center; /* Asigură alinierea verticală corectă */
+        justify-content: center; /* Centrează pe orizontală */
         margin-left: 0; /* Elimină deplasarea laterală */
         width: 100%;
     }
 
-.logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
+    .logo {
+        width: 40px; /* Asigură o dimensiune constantă */
+        height: 40px;
+        margin-right: 10px; /* Menține spațierea dintre logo și text */
+    }
 
-.kolx-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 1px;
-}
+    .kolx-text {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center; /* Se aliniază perfect cu logo-ul */
+    }
 
 .content {
     display: flex;
@@ -278,7 +282,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: -40px; /* Ridică butoanele cu 2 cm */
+    margin-top: -100px; /* Ridică butoanele cu 2 cm */
 }
 
 .btn {
