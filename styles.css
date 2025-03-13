@@ -154,6 +154,7 @@ body {
     .footer-buttons {
         flex-direction: column;
         gap: 10px;
+        margin-top: -100px;
     }
 
     .btn {
@@ -168,12 +169,11 @@ header {
     margin-bottom: 40px;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-left: -200px;
-}
+    .logo-link {
+        justify-content: center; /* Centrează logo-ul și textul KOLX */
+        margin-left: 0; /* Elimină deplasarea laterală */
+        width: 100%;
+    }
 
 .logo {
     width: 40px;
