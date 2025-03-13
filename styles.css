@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%); /* Gradient subtil pentru fundal */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    flex: 1;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.kolx-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 250px);
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 20px 0;
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+.follow-btn {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.follow-btn span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 15px;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid #444;
+    color: #fff; /* Culoare albă, la fel ca textul "Follow Us" */
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    border-color: #ff6200;
+    color: #ff6200;
+}
