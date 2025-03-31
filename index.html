@@ -183,6 +183,7 @@
                 padding: 10px 20px; /* Reduce vertical padding */
                 justify-content: space-between; /* Logo on left, hamburger on right */
                 align-items: center;
+                position: relative; /* Ensure proper positioning for hamburger */
             }
             .nav-logo {
                 margin: 0; /* Remove any margins that might offset the logo */
@@ -208,6 +209,10 @@
             }
             .hamburger {
                 display: block; /* Ensure hamburger icon is visible on mobile */
+                position: absolute;
+                right: 20px; /* Position in top-right corner */
+                top: 50%; /* Center vertically */
+                transform: translateY(-50%); /* Adjust for perfect centering */
             }
             #menu-toggle:checked ~ .nav-menu {
                 display: block; /* Show menu when checkbox is checked */
@@ -216,7 +221,7 @@
                 padding-top: 80px; /* Add space below the fixed navbar */
             }
             .hero h1 {
-                font-size: 32px; /* Reduce heading size on mobile */
+                font-size: 32px; /* Reduced heading size on mobile */
             }
         }
     </style>
