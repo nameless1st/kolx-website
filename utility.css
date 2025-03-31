@@ -1,3 +1,9 @@
+body {
+    position: relative;
+    background-color: #0D1117; /* Asigurăm fundalul corect */
+    color: #FFFFFF; /* Asigurăm vizibilitatea textului */
+}
+
 .hero {
     position: relative;
     height: 60vh;
@@ -6,6 +12,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1; /* Peste canvas */
 }
 .hero h1 {
     font-size: 48px;
@@ -18,6 +25,8 @@
 .section {
     padding: 80px 20px;
     text-align: center;
+    position: relative;
+    z-index: 1; /* Peste canvas */
 }
 .section h2 {
     font-family: 'Montserrat', sans-serif;
