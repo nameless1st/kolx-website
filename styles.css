@@ -228,7 +228,7 @@ canvas {
 }
 .content-wrapper {
     position: relative;
-    top: -250px; /* Moves everything inside up by 250px */
+    top: -250px; /* Default position for desktop */
 }
 
 /* Mobile Styles */
@@ -300,5 +300,8 @@ canvas {
     }
     .footer {
         padding: 20px;
+    }
+    .content-wrapper {
+        top: -50px; /* Adjusted for mobile: -250px + 200px = -50px */
     }
 }
