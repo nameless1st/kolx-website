@@ -57,7 +57,7 @@
         }
         .hero {
             position: relative;
-            height: 60vh; /* Same as dock-staking.html */
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -137,6 +137,54 @@
         .section a:hover {
             color: #00C4FF;
         }
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px; /* Reduce vertical padding to make navbar less tall */
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-logo {
+                justify-content: center;
+                font-size: 20px;
+            }
+            .nav-logo img {
+                width: 100px; /* Slightly smaller logo on mobile */
+            }
+            .nav-menu {
+                display: none; /* Hide menu by default on mobile */
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+            .nav-menu a {
+                display: block; /* Stack links vertically */
+                margin: 10px 0;
+                font-size: 18px;
+            }
+            .hamburger {
+                display: block; /* Show hamburger icon on mobile */
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            #menu-toggle:checked ~ .nav-menu {
+                display: block; /* Show menu when checkbox is checked */
+            }
+            .hero {
+                padding-top: 80px; /* Add space below the navbar on mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -147,6 +195,8 @@
                 <img src="kolx-logo.png" alt="KOLX Logo">
             </a>
         </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
         <div class="nav-menu">
             <a href="index.html#trust">Trust Score</a>
             <a href="index.html#staking">Staking</a>
