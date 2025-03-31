@@ -45,11 +45,11 @@
             text-decoration: none;
             color: inherit;
         }
-        .nav-links {
+        .nav-menu {
             margin-left: auto;
             margin-right: 189px;
         }
-        .nav-links a {
+        .nav-menu a {
             margin-left: 25px;
             color: #FFFFFF;
             text-decoration: none;
@@ -166,97 +166,6 @@
             text-shadow: 0 0 10px rgba(0, 196, 255, 0.7);
             letter-spacing: 1px;
         }
-        /* Hamburger Menu Styles */
-        #menu-toggle {
-            display: none; /* Hidden checkbox for toggling menu */
-        }
-        .hamburger {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            cursor: pointer;
-            position: relative;
-        }
-        .hamburger span {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: #FFFFFF;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .hamburger span:nth-child(1) {
-            top: 12px;
-        }
-        .hamburger span:nth-child(2) {
-            top: 19px;
-        }
-        .hamburger span:nth-child(3) {
-            top: 26px;
-        }
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: 400px; /* Approximately 10cm */
-            background: rgba(13,17,23,0.95);
-            transform: translateX(100%); /* Hidden by default */
-            transition: transform 0.3s ease; /* Smooth slide-in effect */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-        .sidebar a {
-            margin: 20px 0; /* Stack links vertically */
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        #menu-toggle:checked ~ .sidebar {
-            transform: translateX(0); /* Slide in when checkbox is checked */
-        }
-        /* Desktop Styles */
-        @media (min-width: 769px) {
-            .hamburger {
-                margin-left: 25px; /* Space after the last nav link */
-            }
-        }
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 20px; /* Reduce padding for mobile */
-                justify-content: space-between; /* Logo on left, hamburger on right */
-                align-items: center;
-            }
-            .nav-logo {
-                margin: 0; /* Remove any margins that might offset the logo */
-            }
-            .nav-logo img {
-                width: 80px; /* Smaller logo on mobile */
-            }
-            .nav-links {
-                display: none; /* Hide the original nav links on mobile */
-            }
-            .hamburger {
-                margin-left: 0; /* Remove margin on mobile */
-            }
-            .sidebar a {
-                font-size: 16px; /* Slightly smaller font size on mobile */
-            }
-            .hero {
-                padding-top: 80px; /* Add space below the fixed navbar */
-            }
-            .hero h1 {
-                font-size: 32px; /* Reduce heading size on mobile */
-            }
-        }
     </style>
 </head>
 <body>
@@ -267,20 +176,7 @@
                 <img src="kolx-logo.png" alt="KOLX Logo">
             </a>
         </div>
-        <div class="nav-links">
-            <a href="#trust">Trust Score System</a>
-            <a href="#staking">Staking</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#community">Community</a>
-            <a href="utility.html">KOLX Utility</a>
-        </div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="sidebar">
+        <div class="nav-menu">
             <a href="#trust">Trust Score System</a>
             <a href="#staking">Staking</a>
             <a href="#roadmap">Roadmap</a>
