@@ -248,7 +248,7 @@ canvas {
     }
     .hamburger-btn {
         margin-left: 0; /* Remove left margin */
-        margin-right: 20px; /* Symmetrical with navbar padding */
+        margin-right: 30px; /* Symmetrical with navbar padding */
     }
     .sidebar {
         width: 250px; /* Narrower sidebar */
