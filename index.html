@@ -25,19 +25,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 120px; /* Increased from 100px to 120px for wider navbar */
+            padding: 10px 120px; /* 120px padding on both sides */
             background: rgba(13,17,23,0.9);
             z-index: 1000;
         }
         .nav-logo {
             display: flex;
             align-items: center;
-            font-size: 28px; /* Increased from 24px */
+            font-size: 28px;
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
         .nav-logo img {
-            width: 120px; /* Increased from 100px */
+            width: 120px;
             height: auto;
             margin-right: 10px;
         }
@@ -48,13 +48,13 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            margin-right: 40px; /* Adjusted to move buttons left and ensure hamburger visibility */
+            margin-right: 120px; /* Matches the 120px padding from the right edge */
         }
         .nav-menu a {
-            margin-left: 30px; /* Increased from 25px for spacing */
+            margin-left: 35px; /* Increased from 30px for better spacing */
             color: #FFFFFF;
             text-decoration: none;
-            font-size: 16px; /* Increased from 14px */
+            font-size: 16px;
         }
         .hero {
             position: relative;
@@ -168,14 +168,14 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px; /* Unchanged */
-            height: 30px; /* Unchanged */
+            width: 30px;
+            height: 30px;
             background-color: #1C2526;
             border: 2px solid #00A8E8;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, border-color 0.3s;
-            margin-left: 25px; /* Unchanged */
+            margin-left: 25px; /* Space between last link and hamburger */
         }
         .hamburger-btn:hover {
             background-color: #2A3439;
@@ -185,8 +185,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 16px; /* Unchanged */
-            height: 10px; /* Unchanged */
+            width: 16px;
+            height: 10px;
         }
         .hamburger-btn .lines span {
             display: block;
@@ -216,8 +216,9 @@
         .sidebar a {
             margin: 20px 0;
             color: #FFFFFF;
+;
             text-decoration: none;
-            font-size: 18px; /* Increased from 16px */
+            font-size: 18px;
         }
         #menu-toggle:checked ~ .sidebar {
             transform: translateX(0);
