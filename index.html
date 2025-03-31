@@ -6,13 +6,18 @@
     <title>KOLX AI - Revolutionizing Crypto Marketing</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        html {
+            background-color: #0D1117; /* Fallback color */
+        }
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #0D1117;
             color: #FFFFFF;
             overflow-x: hidden;
+        }
+        body {
+            background-color: transparent; /* Ensure no static color */
         }
         .navbar {
             position: fixed;
@@ -106,6 +111,9 @@
             position: fixed;
             top: 0;
             left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
         }
         /* Styles for the additional buttons */
         .additional-buttons {
@@ -145,6 +153,18 @@
             font-size: 16px;
             color: #B0BEC5;
             margin-top: 30px;
+        }
+        /* Hover effect for headings */
+        .section h2, .feature-item h3 {
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .section h2:hover, .feature-item h3:hover {
+            color: #00C4FF;
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(0, 196, 255, 0.7);
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -211,7 +231,7 @@
             <li>📈 <strong>Market Stability:</strong> Your long-term commitment helps ensure token stability.</li>
         </ul>
         <p class="section-note">Stake KOLX, support the network, and grow with the future of crypto marketing.</p>
-        <button class="custom-btn">Learn More</button>
+        <button class="custom-btn" onclick="window.location='docs-staking.html'">Learn More</button>
     </div>
     <div class="section" id="roadmap">
         <h2>Interactive Roadmap</h2>
@@ -321,7 +341,7 @@
         }
         function connect() {
             let opacityValue = 1;
-            for (let a = 0; a < particlesArray.length; a++) { // Fixed syntax error
+            for (let a = 0; a < particlesArray.length; a++) {
                 for (let b = a; b < particlesArray.length; b++) {
                     let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) + ((particlesArray[a].y - particlesArray[b].y) ** 2);
                     if (distance < (canvas.width / 7) * (canvas.height / 7)) {
