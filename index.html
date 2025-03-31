@@ -32,8 +32,8 @@
             font-weight: bold;
         }
         .nav-logo img {
-            width: 120px; /* Increased size */
-            height: auto; /* Maintain aspect ratio */
+            width: 120px;
+            height: auto;
             margin-right: 10px;
         }
         .logo-link {
@@ -321,7 +321,7 @@
         }
         function connect() {
             let opacityValue = 1;
-            for (let a = 0; i < particlesArray.length; a++) {
+            for (let a = 0; a < particlesArray.length; a++) { // Fixed syntax error
                 for (let b = a; b < particlesArray.length; b++) {
                     let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) + ((particlesArray[a].y - particlesArray[b].y) ** 2);
                     if (distance < (canvas.width / 7) * (canvas.height / 7)) {
