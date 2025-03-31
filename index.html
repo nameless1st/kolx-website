@@ -166,24 +166,24 @@
             text-shadow: 0 0 10px rgba(0, 196, 255, 0.7);
             letter-spacing: 1px;
         }
-        /* Hamburger Menu Styles */
+        /* Hamburger Menu Styles for Mobile */
         .hamburger {
-            display: none;
+            display: none; /* Hidden by default on desktop */
             font-size: 24px;
             cursor: pointer;
             color: #FFFFFF;
-            line-height: 1; /* Ensure proper alignment */
+            line-height: 1;
         }
         #menu-toggle {
-            display: none;
+            display: none; /* Hidden checkbox for toggling menu */
         }
         /* Mobile Styles */
         @media (max-width: 768px) {
             .navbar {
-                padding: 10px 20px; /* Reduce vertical padding */
+                padding: 10px 20px; /* Reduce padding for mobile */
                 justify-content: space-between; /* Logo on left, hamburger on right */
                 align-items: center;
-                position: relative; /* Ensure proper positioning for hamburger */
+                position: relative;
             }
             .nav-logo {
                 margin: 0; /* Remove any margins that might offset the logo */
@@ -203,12 +203,12 @@
                 z-index: 999;
             }
             .nav-menu a {
-                display: block; /* Stack links vertically */
+                display: block; /* Stack links vertically in dropdown */
                 margin: 10px 0; /* Space between links */
                 font-size: 16px;
             }
             .hamburger {
-                display: block; /* Ensure hamburger icon is visible on mobile */
+                display: block; /* Show hamburger icon on mobile */
                 position: absolute;
                 right: 20px; /* Position in top-right corner */
                 top: 50%; /* Center vertically */
@@ -221,7 +221,7 @@
                 padding-top: 80px; /* Add space below the fixed navbar */
             }
             .hero h1 {
-                font-size: 32px; /* Reduced heading size on mobile */
+                font-size: 32px; /* Reduce heading size on mobile */
             }
         }
     </style>
@@ -241,7 +241,7 @@
             <a href="#staking">Staking</a>
             <a href="#roadmap">Roadmap</a>
             <a href="#community">Community</a>
-            <a href="utility.html">Utility</a>
+            <a href="utility.html">KOLX Utility</a>
         </div>
     </div>
     <div class="hero">
