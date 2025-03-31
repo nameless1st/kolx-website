@@ -45,11 +45,11 @@
             text-decoration: none;
             color: inherit;
         }
-        .nav-menu {
+        .nav-links {
             margin-left: auto;
             margin-right: 189px;
         }
-        .nav-menu a {
+        .nav-links a {
             margin-left: 25px;
             color: #FFFFFF;
             text-decoration: none;
@@ -178,7 +178,6 @@
             border-radius: 5px;
             cursor: pointer;
             position: relative;
-            margin-left: 25px; /* Space after Utility link on desktop */
         }
         .hamburger span {
             display: block;
@@ -198,32 +197,35 @@
         .hamburger span:nth-child(3) {
             top: 26px;
         }
-        /* Sidebar Menu Styles */
-        .nav-menu {
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 400px; /* Approximately 10cm */
+            background: rgba(13,17,23,0.95);
+            transform: translateX(100%); /* Hidden by default */
             transition: transform 0.3s ease; /* Smooth slide-in effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
         }
-        #menu-toggle:checked ~ .nav-menu {
+        .sidebar a {
+            margin: 20px 0; /* Stack links vertically */
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #menu-toggle:checked ~ .sidebar {
             transform: translateX(0); /* Slide in when checkbox is checked */
         }
         /* Desktop Styles */
         @media (min-width: 769px) {
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 200px; /* Approximately 5cm */
-                background: rgba(13,17,23,0.95);
-                transform: translateX(100%); /* Hidden by default */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                z-index: 999;
-            }
-            .nav-menu a {
-                margin: 20px 0; /* Stack links vertically */
-                font-size: 18px;
+            .hamburger {
+                margin-left: 25px; /* Space after the last nav link */
             }
         }
         /* Mobile Styles */
@@ -239,29 +241,14 @@
             .nav-logo img {
                 width: 80px; /* Smaller logo on mobile */
             }
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 200px; /* Approximately 5cm */
-                background: rgba(13,17,23,0.95);
-                transform: translateX(100%); /* Hidden by default */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                z-index: 999;
-            }
-            .nav-menu a {
-                margin: 20px 0; /* Stack links vertically */
-                font-size: 16px;
-            }
-            .nav-menu a.nav-link {
-                display: none; /* Hide the original nav links in the navbar on mobile */
+            .nav-links {
+                display: none; /* Hide the original nav links on mobile */
             }
             .hamburger {
                 margin-left: 0; /* Remove margin on mobile */
+            }
+            .sidebar a {
+                font-size: 16px; /* Slightly smaller font size on mobile */
             }
             .hero {
                 padding-top: 80px; /* Add space below the fixed navbar */
@@ -280,18 +267,25 @@
                 <img src="kolx-logo.png" alt="KOLX Logo">
             </a>
         </div>
+        <div class="nav-links">
+            <a href="#trust">Trust Score System</a>
+            <a href="#staking">Staking</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#community">Community</a>
+            <a href="utility.html">KOLX Utility</a>
+        </div>
         <input type="checkbox" id="menu-toggle">
-        <div class="nav-menu">
-            <a href="#trust" class="nav-link">Trust Score System</a>
-            <a href="#staking" class="nav-link">Staking</a>
-            <a href="#roadmap" class="nav-link">Roadmap</a>
-            <a href="#community" class="nav-link">Community</a>
-            <a href="utility.html" class="nav-link">KOLX Utility</a>
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <a href="#trust">Trust Score System</a>
+            <a href="#staking">Staking</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#community">Community</a>
+            <a href="utility.html">KOLX Utility</a>
         </div>
     </div>
     <div class="hero">
