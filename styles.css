@@ -238,7 +238,7 @@ canvas {
         padding: 10px 20px; /* Symmetrical padding for logo and hamburger */
     }
     .nav-logo img {
-        width: 80px; /* Smaller logo */
+        width: 120px; /* Smaller logo */
     }
     .nav-menu {
         margin-right: 0; /* Remove large margin */
