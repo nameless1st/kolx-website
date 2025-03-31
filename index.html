@@ -172,6 +172,7 @@
             font-size: 24px;
             cursor: pointer;
             color: #FFFFFF;
+            line-height: 1; /* Ensure proper alignment */
         }
         #menu-toggle {
             display: none;
@@ -206,13 +207,16 @@
                 font-size: 16px;
             }
             .hamburger {
-                display: block; /* Show hamburger icon on mobile */
+                display: block; /* Ensure hamburger icon is visible on mobile */
             }
             #menu-toggle:checked ~ .nav-menu {
                 display: block; /* Show menu when checkbox is checked */
             }
             .hero {
                 padding-top: 80px; /* Add space below the fixed navbar */
+            }
+            .hero h1 {
+                font-size: 32px; /* Reduce heading size on mobile */
             }
         }
     </style>
@@ -357,7 +361,7 @@
                     if (mouse.x > this.x && this.x > this.size * 10) {
                         this.x -= 10;
                     }
-                    if (mouse.y < this.y && this.y < canvas.height - the.size * 10) {
+                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
                         this.y += 10;
                     }
                     if (mouse.y > this.y && this.y > this.size * 10) {
