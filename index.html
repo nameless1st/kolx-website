@@ -25,7 +25,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding: 10px 100px; /* Kept as per your preference */
+            padding: 10px 100px;
             background: rgba(13,17,23,0.9);
             z-index: 1000;
         }
@@ -173,10 +173,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
+            width: 30px; /* Reduced from 40px to 30px */
+            height: 30px; /* Reduced from 40px to 30px */
             background-color: #1C2526;
-            border: 1px solid #00A8E8;
+            border: 2px solid #00A8E8;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, border-color 0.3s;
@@ -190,12 +190,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 20px;
-            height: 14px;
+            width: 16px; /* Reduced from 20px to 16px to fit smaller button */
+            height: 10px; /* Reduced from 14px to 10px to fit smaller button */
         }
         .hamburger-btn .lines span {
             display: block;
-            width: 20px;
+            width: 16px;
             height: 2px;
             background: #FFFFFF;
         }
@@ -216,7 +216,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 999;
+            z-index: 1001; /* Ensure it’s above the navbar */
         }
         .sidebar a {
             margin: 20px 0; /* Stack links vertically */
@@ -251,13 +251,13 @@
                     <span></span>
                 </div>
             </label>
-        </div>
-        <div class="sidebar">
-            <a href="#trust">Trust Score System</a>
-            <a href="#staking">Staking</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#community">Community</a>
-            <a href="utility.html">KOLX Utility</a>
+            <div class="sidebar">
+                <a href="#trust">Trust Score System</a>
+                <a href="#staking">Staking</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#community">Community</a>
+                <a href="utility.html">KOLX Utility</a>
+            </div>
         </div>
     </div>
     <div class="hero">
