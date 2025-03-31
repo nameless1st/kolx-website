@@ -42,7 +42,7 @@ body {
     align-items: center;
     margin-right: 240px;
 }
-.nav-menu a {
+.nav-menu-links {
     margin-left: 35px;
     color: #FFFFFF;
     text-decoration: none;
@@ -205,11 +205,12 @@ canvas {
     padding-top: 60px;
     z-index: 1001;
 }
-.sidebar a {
+.sidebar-links {
     margin: 20px 0;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 18px;
+    display: block; /* Ensure visibility by default */
 }
 #menu-toggle:checked ~ .sidebar {
     transform: translateX(0);
@@ -242,8 +243,8 @@ canvas {
     .nav-menu {
         margin-right: 0; /* Remove large margin */
     }
-    .nav-menu a {
-        display: none !important; /* Force hide text buttons on mobile */
+    .nav-menu-links {
+        display: none; /* Hide nav menu links on mobile */
     }
     .hamburger-btn {
         margin-left: 0; /* Remove left margin */
@@ -253,10 +254,10 @@ canvas {
         width: 250px; /* Narrower sidebar */
         padding-top: 50px; /* Adjust padding for content */
     }
-    .sidebar a {
+    .sidebar-links {
         font-size: 16px; /* Smaller text */
         margin: 15px 0; /* Reduced spacing */
-        display: block; /* Ensure links are visible */
+        display: block; /* Ensure sidebar links are visible on mobile */
     }
     .hero {
         height: 70vh;
@@ -302,6 +303,6 @@ canvas {
         padding: 20px;
     }
     .content-wrapper {
-        top: -50px; /* Adjusted for mobile: -250px + 200px = -50px */
+        top: -50px; /* Adjusted for mobile */
     }
 }
