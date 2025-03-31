@@ -1,9 +1,3 @@
-body {
-    position: relative;
-    background-color: #0D1117; /* Asigurăm fundalul corect */
-    color: #FFFFFF; /* Asigurăm vizibilitatea textului */
-}
-
 .hero {
     position: relative;
     height: 60vh;
