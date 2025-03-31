@@ -173,8 +173,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px; /* Reduced from 40px to 30px */
-            height: 30px; /* Reduced from 40px to 30px */
+            width: 30px;
+            height: 30px;
             background-color: #1C2526;
             border: 2px solid #00A8E8;
             border-radius: 5px;
@@ -190,8 +190,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 16px; /* Reduced from 20px to 16px to fit smaller button */
-            height: 10px; /* Reduced from 14px to 10px to fit smaller button */
+            width: 16px;
+            height: 10px;
         }
         .hamburger-btn .lines span {
             display: block;
@@ -227,6 +227,19 @@
         #menu-toggle:checked ~ .sidebar {
             transform: translateX(0); /* Slide in when checkbox is checked */
         }
+        /* Close Button Styles */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover {
+            color: #00C4FF;
+        }
     </style>
 </head>
 <body>
@@ -252,6 +265,7 @@
                 </div>
             </label>
             <div class="sidebar">
+                <label for="menu-toggle" class="close-btn">✖</label>
                 <a href="#trust">Trust Score System</a>
                 <a href="#staking">Staking</a>
                 <a href="#roadmap">Roadmap</a>
