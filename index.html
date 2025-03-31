@@ -47,7 +47,7 @@
         }
         .nav-menu {
             margin-left: auto;
-            margin-right: 20px; /* Adjusted to make space for the hamburger button */
+            margin-right: 189px; /* Reverted to original spacing */
             display: flex;
             align-items: center;
         }
@@ -169,34 +169,35 @@
             letter-spacing: 1px;
         }
         /* Hamburger Button Styles */
-        .hamburger {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.2); /* Slightly more opaque background for visibility */
+        .hamburger-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px; /* Square shape */
+            height: 40px; /* Square shape */
+            background-color: #1C2526;
+            border: 2px solid #00A8E8;
             border-radius: 5px;
             cursor: pointer;
-            position: relative;
+            transition: background-color 0.3s, border-color 0.3s;
             margin-left: 25px; /* Space after the last nav link */
-            z-index: 1001; /* Ensure it’s above other elements */
         }
-        .hamburger span {
+        .hamburger-btn:hover {
+            background-color: #2A3439;
+            border-color: #00C4FF;
+        }
+        .hamburger-btn .lines {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 20px;
+            height: 14px;
+        }
+        .hamburger-btn .lines span {
             display: block;
             width: 20px;
             height: 2px;
             background: #FFFFFF;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .hamburger span:nth-child(1) {
-            top: 12px;
-        }
-        .hamburger span:nth-child(2) {
-            top: 19px;
-        }
-        .hamburger span:nth-child(3) {
-            top: 26px;
         }
     </style>
 </head>
@@ -214,10 +215,12 @@
             <a href="#roadmap">Roadmap</a>
             <a href="#community">Community</a>
             <a href="utility.html">KOLX Utility</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="hamburger-btn">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
