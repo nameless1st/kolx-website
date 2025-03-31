@@ -166,34 +166,53 @@
             text-shadow: 0 0 10px rgba(0, 196, 255, 0.7);
             letter-spacing: 1px;
         }
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+        #menu-toggle {
+            display: none;
+        }
         /* Mobile Styles */
         @media (max-width: 768px) {
             .navbar {
-                position: static; /* Remove fixed positioning on mobile */
                 padding: 10px 20px; /* Reduce vertical padding */
-                flex-direction: column; /* Stack logo and menu vertically */
+                justify-content: space-between; /* Logo on left, hamburger on right */
                 align-items: center;
             }
             .nav-logo {
-                justify-content: center;
                 margin: 0; /* Remove any margins that might offset the logo */
             }
             .nav-logo img {
-                width: 80px; /* Smaller logo on mobile to save space */
+                width: 80px; /* Smaller logo on mobile */
             }
             .nav-menu {
-                margin: 5px 0 0 0; /* Reduce top margin */
+                display: none; /* Hide menu by default on mobile */
+                position: absolute;
+                top: 60px; /* Position below the navbar */
+                left: 0;
+                width: 100%;
+                background: rgba(13,17,23,0.95); /* Slightly darker background for menu */
+                padding: 10px 0;
                 text-align: center;
+                z-index: 999;
             }
             .nav-menu a {
                 display: block; /* Stack links vertically */
-                margin: 5px 0; /* Reduce spacing between links */
-                font-size: 14px; /* Smaller font size to save space */
+                margin: 10px 0; /* Space between links */
+                font-size: 16px;
+            }
+            .hamburger {
+                display: block; /* Show hamburger icon on mobile */
+            }
+            #menu-toggle:checked ~ .nav-menu {
+                display: block; /* Show menu when checkbox is checked */
             }
             .hero {
-                padding-top: 20px; /* Small padding to avoid content starting at the very top */
-                height: auto; /* Adjust height to fit content */
-                min-height: 60vh; /* Ensure it doesn't collapse too much */
+                padding-top: 80px; /* Add space below the fixed navbar */
             }
         }
     </style>
@@ -206,6 +225,8 @@
                 <img src="kolx-logo.png" alt="KOLX Logo">
             </a>
         </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
         <div class="nav-menu">
             <a href="#trust">Trust Score</a>
             <a href="#staking">Staking</a>
