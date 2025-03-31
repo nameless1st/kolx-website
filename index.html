@@ -36,6 +36,10 @@
             height: 30px;
             margin-right: 10px;
         }
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+        }
         .nav-menu {
             margin-left: auto;
             margin-right: 189px;
@@ -125,7 +129,7 @@
             background-color: #2A3439;
             border-color: #00C4FF;
         }
-        /* New styles for lists and italicized text */
+        /* Styles for lists and italicized text */
         .section-list {
             list-style: none;
             padding-left: 20px;
@@ -142,13 +146,86 @@
             color: #B0BEC5;
             margin-top: 30px;
         }
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            /* Navigation Bar */
+            .navbar {
+                flex-direction: column;
+                padding: 20px 20px;
+                align-items: flex-start;
+            }
+            .nav-menu {
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-menu a {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            /* Hero Section */
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .additional-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .cta.btn, .custom-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            /* Features Section */
+            .features {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .feature-item {
+                margin: 10px 0;
+            }
+
+            /* General Sections */
+            .section {
+                padding: 40px 10px;
+            }
+            .section-list {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+            .section-note {
+                font-size: 14px;
+            }
+
+            /* Community Section */
+            .community div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
     <div class="navbar">
         <div class="nav-logo">
-            <img src="kolx-logo.png" alt="KOLX Logo"> KOLX.land
+            <a href="index.html" class="logo-link">
+                <img src="kolx-logo.png" alt="KOLX Logo"> KOLX.land
+            </a>
         </div>
         <div class="nav-menu">
             <a href="#trust">Trust Score</a>
