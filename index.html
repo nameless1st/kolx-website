@@ -169,7 +169,8 @@
         /* Mobile Styles */
         @media (max-width: 768px) {
             .navbar {
-                padding: 10px 20px; /* Reduce vertical padding to make navbar less tall */
+                position: static; /* Remove fixed positioning on mobile */
+                padding: 10px 20px; /* Reduce vertical padding */
                 flex-direction: column; /* Stack logo and menu vertically */
                 align-items: center;
             }
@@ -178,19 +179,21 @@
                 margin: 0; /* Remove any margins that might offset the logo */
             }
             .nav-logo img {
-                width: 100px; /* Slightly smaller logo on mobile */
+                width: 80px; /* Smaller logo on mobile to save space */
             }
             .nav-menu {
-                margin: 10px 0 0 0; /* Remove right margin and add top margin */
+                margin: 5px 0 0 0; /* Reduce top margin */
                 text-align: center;
             }
             .nav-menu a {
                 display: block; /* Stack links vertically */
-                margin: 10px 0; /* Space between links */
-                font-size: 16px;
+                margin: 5px 0; /* Reduce spacing between links */
+                font-size: 14px; /* Smaller font size to save space */
             }
             .hero {
-                padding-top: 150px; /* Add space below the navbar on mobile */
+                padding-top: 20px; /* Small padding to avoid content starting at the very top */
+                height: auto; /* Adjust height to fit content */
+                min-height: 60vh; /* Ensure it doesn't collapse too much */
             }
         }
     </style>
