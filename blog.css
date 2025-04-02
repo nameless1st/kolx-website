@@ -1,0 +1,243 @@
+/* blog.css */
+body {
+    background-color: #0D1117;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.navbar {
+    position: relative;
+    z-index: 20;
+}
+
+.blog-container {
+    max-width: 1000px;
+    margin: 100px auto 0; /* Centrat orizontal */
+    background-color: #0D1117;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    min-height: 500px; /* Redus de la 800px la 500px */
+    box-shadow: 0 0 20px rgba(0, 168, 232, 0.3);
+}
+
+.section {
+    margin-top: -100px;
+}
+
+.section h2 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section > p {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.blog-post {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 60px auto 0;
+    text-align: left;
+    background: #1C2526;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.blog-post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blog-post-content {
+    flex: 1;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #B0BEC5;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto; /* Spațiu între chenar și paginare */
+    max-width: 1000px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Stiluri specifice pentru butoanele de paginare */
+.page-btn {
+    background-color: #1C2526;
+    border: 1px solid #00A8E8;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: #00A8E8;
+    color: #FFFFFF;
+}
+
+.page-btn:disabled {
+    background-color: #1C2526;
+    color: #B0BEC5;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.page-prev, .page-next {
+    padding: 5px 15px; /* Lunguiețe */
+    border-radius: 15px; /* Colțuri rotunjite */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.page-current {
+    width: 30px; /* Cerc */
+    height: 30px;
+    padding: 0;
+    border-radius: 50%; /* Formă de cerc */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #00A8E8; /* Evidențiat permanent */
+    color: #FFFFFF;
+}
+
+.footer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-container {
+        margin: 0 15px;
+        padding: 20px;
+        min-height: 300px; /* Redus de la 600px la 300px pentru responsivitate */
+    }
+
+    .section {
+        margin-top: 15px;
+    }
+
+    .blog-post {
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .blog-post-image {
+        flex: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .blog-post h3 {
+        font-size: 20px;
+    }
+
+    .blog-date {
+        font-size: 12px;
+    }
+
+    .blog-post p {
+        font-size: 14px;
+    }
+
+    .pagination {
+        margin: 15px auto;
+        gap: 8px;
+    }
+
+    .page-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+
+    .page-prev, .page-next {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    .page-current {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
