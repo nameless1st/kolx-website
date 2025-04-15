@@ -1,0 +1,198 @@
+/* blog.css */
+body {
+    background-color: #0D1117;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asigurăm că body-ul ocupă întreaga înălțime a ferestrei */
+    overflow: hidden; /* Dezactivăm scroll-ul pe body */
+}
+
+.navbar {
+    position: fixed; /* Fixăm bara de navigare */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.nav-menu {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed; /* Fixăm meniul lateral */
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 21;
+}
+
+.blog-container {
+    max-width: 1000px;
+    margin: 100px auto 50px; /* Păstrăm marginile pentru poziționare */
+    background-color: #0D1117; /* Fundal opac */
+    padding: 40px;
+    border-radius: 10px;
+    position: relative; /* Blog-container rămâne relativ pentru a permite scroll-ul */
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 168, 232, 0.3);
+    box-sizing: border-box;
+    max-height: calc(100vh - 150px); /* Limităm înălțimea la înălțimea ferestrei minus marginile */
+    overflow-y: auto; /* Permitem scroll-ul vertical doar în interiorul containerului */
+    /* Efect de fade de 20px la marginea de sus și de jos */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20px,
+        black calc(100% - 20px),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20px,
+        black calc(100% - 20px),
+        transparent 100%
+    );
+}
+
+.blog-post-banner {
+    width: 100%; /* Lățimea se ajustează la container */
+    height: 200px; /* Înălțime fixă pentru banner dreptunghiular */
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.blog-post-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Imaginea se ajustează pentru a umple spațiul */
+    object-position: center;
+    display: block; /* Eliminăm spațiile nedorite sub imagine */
+}
+
+.blog-post-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-header {
+    margin-bottom: 20px;
+}
+
+.blog-post-header h1 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #B0BEC5;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.blog-post-content {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.blog-post-content p {
+    margin: 0 0 15px 0;
+}
+
+.section h2,
+.blog-post-content h2 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.blog-post-content ul {
+    margin: 0 0 15px 20px;
+    padding: 0;
+}
+
+.blog-post-content ul li {
+    margin-bottom: 10px;
+}
+
+.blog-post-content a {
+    color: #00A8E8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-post-content a:hover {
+    color: #00C4FF;
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centrarea butoanelor */
+    margin-top: 20px;
+}
+
+.page-btn {
+    background-color: #1C2526;
+    border: 1px solid #00A8E8;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Eliminăm sublinierea implicită a link-urilor */
+}
+
+.page-btn:hover {
+    background-color: #00A8E8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-container {
+        margin: 80px 15px 30px;
+        padding: 20px;
+        max-height: calc(100vh - 110px); /* Ajustăm pentru marginile mai mici pe mobil */
+    }
+
+    .blog-post-banner {
+        height: 150px; /* Înălțime mai mică pentru ecrane mici */
+    }
+
+    .blog-post-header h1 {
+        font-size: 24px;
+    }
+
+    .blog-date {
+        font-size: 12px;
+    }
+
+    .blog-post-content {
+        font-size: 14px;
+    }
+
+    .section h2,
+    .blog-post-content h2 {
+        font-size: 20px;
+    }
+
+    .page-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
